@@ -95,3 +95,32 @@ func TestNewMigrationToYaml(t *testing.T) {
 		t.Errorf("got [%v] want [%v]", got, want)
 	}
 }
+
+/*
+func TestNewFilenameWithIndex(t *testing.T) {
+	type args struct {
+		desc          string
+		migrationPath string
+	}
+	tests := []struct {
+		name string
+		args args
+		want string
+	}{
+		{
+			name: "cool",
+			args: args{"cool", "test"},
+			want: "010_cool.yaml",
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := NewFilenameWithIndex(tt.args.desc, tt.args.migrationPath); got != tt.want {
+				t.Errorf("NewFilenameWithIndex(%s, %s) = %v, want %v", tt.args.desc, tt.args.migrationPath, got, tt.want)
+			} else {
+				fmt.Printf("\n\nNewFilenameWithIndex(%s, %s) = %v, want %v", tt.args.desc, tt.args.migrationPath, got, tt.want)
+			}
+		})
+	}
+}
+*/
